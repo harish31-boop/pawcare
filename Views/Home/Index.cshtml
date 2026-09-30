@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "PawCare";
+}
+
+<style>
+    body {
+        background: #f5f7fb;
+        color: #263238;
+        font-family: Arial, sans-serif;
+    }
+
+    .hero {
+        max-width: 1100px;
+        margin: 25px auto;
+        padding: 65px 25px;
+        text-align: center;
+        color: white;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #1976d2, #42a5f5);
+        box-shadow: 0 10px 30px rgba(25,118,210,0.25);
+    }
+
+    .paw-logo {
+        font-size: 55px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        margin: 10px 0;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .btn-book {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 30px;
+        background: white;
+        color: #1976d2;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 45px 0 25px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .section-title p {
+        color: #78909c;
+    }
+
+    .services {
+        max-width: 700px;
+        margin: auto;
+        padding: 0 20px 45px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-icon {
+        font-size: 45px;
+    }
+
+    .card h3 {
+        color: #1976d2;
+    }
+
+    .card p {
+        color: #607d8b;
+        line-height: 1.6;
+    }
+
+    .click-text {
+        color: #1976d2;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .footer-note {
+        text-align: center;
+        padding: 25px;
+        color: #607d8b;
+    }
+</style>
+
+<div class="hero">
+
+    <div class="paw-logo">🐾</div>
+
+    <h1>Welcome to PawCare</h1>
+
+    <p>Smart Pet Care & Appointment Management System</p>
+
+    <p>Professional care for your beloved pets.</p>
+
+    <a class="btn-book" href="/Appointment">
+        📅 Book Appointment
+    </a>
+
+</div>
+
+<div class="section-title">
+    <h2>🐶 Our Pet Care Services</h2>
+    <p>Everything your pet needs in one place</p>
+</div>
+
+<div class="services">
+
+    <a href="/Home/HealthCheckup" class="card-link">
+        <div class="card">
+            <div class="card-icon">🩺</div>
+            <h3>Health Checkup</h3>
+            <p>
+                Professional veterinary checkups
+                to keep your pet healthy.
+            </p>
+            <div class="click-text">
+                Click to know more →
+            </div>
+        </div>
+    </a>
+
+    <a href="/Home/PetMedicines" class="card-link">
+        <div class="card">
+            <div class="card-icon">💊</div>
+            <h3>Pet Medicines</h3>
+            <p>
+                Essential medicines and
+                health-care products for pets.
+            </p>
+            <div class="click-text">
+                Click to know more →
+            </div>
+        </div>
+    </a>
+
+    <a href="/Home/VeterinaryConsultation" class="card-link">
+        <div class="card">
+            <div class="card-icon">👨‍⚕️</div>
+            <h3>Veterinary Consultation</h3>
+            <p>
+                Get professional veterinary
+                advice and pet care support.
+            </p>
+            <div class="click-text">
+                Click to know more →
+            </div>
+        </div>
+    </a>
+
+    <a href="/Home/EmergencyCare" class="card-link">
+        <div class="card">
+            <div class="card-icon">🚨</div>
+            <h3>Emergency Care</h3>
+            <p>
+                Quick support for urgent
+                pet healthcare needs.
+            </p>
+            <div class="click-text">
+                Click to know more →
+            </div>
+        </div>
+    </a>
+
+</div>
+
+<div class="footer-note">
+    🐾 PawCare — Caring for Pets, Caring for Families ❤️
+</div>

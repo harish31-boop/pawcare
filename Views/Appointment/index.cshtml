@@ -1,0 +1,122 @@
+@{
+    ViewData["Title"] = "Book Appointment";
+}
+
+<style>
+    .booking-box {
+        max-width: 700px;
+        margin: 40px auto;
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    }
+
+    .booking-title {
+        color: #6c63ff;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 10px;
+        padding: 12px;
+    }
+
+    .btn-book {
+        background: #6c63ff;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 13px;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .success-box {
+        background: #e8f8ee;
+        color: #198754;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="booking-box">
+
+    <h2 class="booking-title text-center">
+        🐾 Book a Pet Care Appointment
+    </h2>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="success-box">
+            <strong>@ViewBag.Message</strong>
+            <br />
+            Pet: @ViewBag.PetName
+            <br />
+            Service: @ViewBag.Service
+            <br />
+            Date: @ViewBag.Date
+            <br />
+            Vet: @ViewBag.Vet
+        </div>
+    }
+
+    <form method="post" asp-controller="Appointment" asp-action="Book">
+
+        <div class="mb-3">
+            <label class="form-label">🐶 Pet Name</label>
+            <input type="text"
+                   name="petName"
+                   class="form-control"
+                   placeholder="Enter pet name"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">👤 Owner Name</label>
+            <input type="text"
+                   name="ownerName"
+                   class="form-control"
+                   placeholder="Enter owner name"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">🩺 Select Service</label>
+            <select name="service" class="form-select" required>
+                <option value="">-- Select Service --</option>
+                <option>General Checkup</option>
+                <option>Vaccination</option>
+                <option>Grooming</option>
+                <option>Emergency Care</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">📅 Appointment Date</label>
+            <input type="date"
+                   name="appointmentDate"
+                   class="form-control"
+                   required />
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">👨‍⚕️ Select Veterinarian</label>
+            <select name="vet" class="form-select" required>
+                <option value="">-- Select Vet --</option>
+                <option>Dr. Arun - General Care</option>
+                <option>Dr. Priya - Vaccination</option>
+                <option>Dr. Karthik - Surgery</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-book">
+            📅 Confirm Appointment
+        </button>
+
+    </form>
+
+</div>
